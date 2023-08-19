@@ -1,0 +1,37 @@
+body{
+    margin: 0 ;
+    height: 100vh;
+    background: rgb(180,177,58);
+    background: linear-gradient(90deg, rgba(180,177,58,1) 35%, rgba(253,29,150,0.8603816526610644) 65%, rgba(137,172,163,1) 100%);
+    overflow: hidden;
+}       
+/*adds the icon and places it in the center of the screen*/
+span{
+    background-image: url("https://cdn4.iconfinder.com/data/icons/essentials-72/24/028_-_Heart-256.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: animate 5s linear;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%) ;
+        /* width: 100px;
+        height: 100px; */
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-5000%) ;
+        /* width: 200px;
+        height: 200px; */
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
