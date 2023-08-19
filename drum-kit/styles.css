@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: bisque;
+}
+
+H1{
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 4px 8px rgba(110, 51, 3, 0.5);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+.container{
+    text-align: center;
+}
+
+.btn{
+    padding: 30px 50px;
+    background-color: #fff;
+    border: none;
+    margin: 20px;
+    font-size: 30px;
+    min-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(110, 51, 3, 0.5);
+    background-image: url("./images/kick.png");
+    background-size: cover;
+    background-color: #fff;
+    font-family: cursive;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.btn:hover{
+color: #fff;
+    box-shadow: 0 4px 8px rgba(219, 145, 8, 0.5);
+    transform: scale(1.1);
+}
+
+/* .btn:active{
+    background-size: 105%;
+} */
+
