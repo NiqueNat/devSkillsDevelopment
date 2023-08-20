@@ -7,7 +7,7 @@ let characterIndex = 0;
 
 function updateText() {  
     characterIndex++;
-    container.innerHTML = `<h1>I am a ${careers[careersIndex].slice(0, characterIndex)}</h1>`;
+    container.innerHTML = `<h1>Myrna Dominique is a ${careers[careersIndex].slice(0, characterIndex)}</h1>`;
 
 
 
