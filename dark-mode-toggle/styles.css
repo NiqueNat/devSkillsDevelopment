@@ -1,0 +1,142 @@
+
+/*Light-mode styling*/
+/*Added background to light-mode*/
+
+h1{
+    font-size: 3rem;
+    color:#fff;
+    text-align: center;
+    font-family: lobster;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0 10px rgba(206, 58, 139, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    line-height: 3;
+}
+
+body.light-mode {
+    background:rgba(180, 177,58);
+    background: linear-gradient(90deg, rgba(180, 177,58,1) 35%, rgba(253,29,150,0.8603816526610644) 65%, rgba(137,172, 163, 1) 100%);
+    overflow: hidden;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    
+}
+/*Added hearts animation to light-mode*/
+.span {
+    background-image: url("./9004758_heart_love_valentine_like_icon.png");
+    position: absolute;
+    pointer-events: none;
+    background-size: contain;
+    animation: animate 7s linear; 
+    transform-origin: center center;
+    background-color: transparent;
+    
+}
+
+
+.light-mode span {
+    background-image: url("./9004758_heart_love_valentine_like_icon.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 5s linear;
+    background-color: transparent;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
+/*end os hearts animation*/
+
+/*Dark-mode*/
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.4s;
+}
+
+/*Added background to dark-mode*/
+body.dark-mode {
+    background-image: url("https://images.unsplash.com/photo-1467709757686-06cbdd818d90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.input{
+    visibility: hidden;
+}
+
+.label{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: lightgrey;
+    border-radius: 20px;
+   cursor: pointer;
+}
+
+.circle{
+    width: 34px;
+    background-color: white;
+    height: 34px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    position: absolute;
+    animation: toggleOff 0.4s linear forwards;
+
+}
+
+.input:checked + .label{
+    background-color: white;
+}
+.input:checked + .label .circle{
+    animation: toggleOn 0.4s linear forwards;
+    background-color: black;
+}
+
+
+@keyframes toggleOn{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(40px);
+    }
+}
+    
+@keyframes toggleOff{
+    0%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+    
